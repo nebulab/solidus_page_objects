@@ -1,2 +1,3 @@
-require 'solidus_core'
-require 'solidus_page_objects/engine'
+require 'capybara'
+require 'capybara/rspec'
+require 'site_prism'
