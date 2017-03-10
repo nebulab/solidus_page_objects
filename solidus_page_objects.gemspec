@@ -13,8 +13,10 @@ Gem::Specification.new do |s|
   s.email     = 'info@nebulab.it'
   # s.homepage  = 'http://www.example.com'
 
-  s.files = Dir["{app,config,db,lib}/**/*", 'LICENSE', 'Rakefile', 'README.md']
-  s.test_files = Dir['test/**/*']
+  s.files         = `git ls-files`.split("\n")
+  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+  s.require_paths = ['lib']
 
   s.add_dependency 'solidus_core', '>= 2.1'
   s.add_dependency 'site_prism', '~> 2.9'
