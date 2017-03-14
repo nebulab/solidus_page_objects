@@ -5,4 +5,9 @@ RSpec.describe Solidus::PageObjects::Sections::Search do
   subject { page.top_navigation.search }
 
   it { is_expected.to be_all_there(recursive: true) }
+
+  describe '.search' do
+    subject { page.top_navigation.search.search_for('keyword') }
+    it { is_expected.to be_a(Solidus::PageObjects::Pages::Products) }
+  end
 end

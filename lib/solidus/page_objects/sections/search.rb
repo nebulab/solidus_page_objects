@@ -13,6 +13,8 @@ module Solidus
           taxon_select.select scope
 
           click_on('Search')
+
+          Pages::Products.new
         end
       end
     end
