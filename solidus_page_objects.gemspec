@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = SolidusPageObjects::VERSION
   s.summary     = 'Solidus Page Objects'
   s.description = 'Page objects for testing solidus applications'
-  s.license     = 'BSD-3-Clause'
+  s.license     = 'MIT'
 
   s.author    = 'Nebulab'
   s.email     = 'info@nebulab.it'
