@@ -18,8 +18,8 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ['lib']
 
-  s.add_dependency 'solidus_core', '>= 2.1'
   s.add_dependency 'site_prism', '~> 2.9'
+  s.add_dependency 'solidus_core', ['>= 1.1', '< 3']
 
   s.add_development_dependency 'poltergeist'
   s.add_development_dependency 'coffee-rails'
