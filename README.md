@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/nebulab/solidus_page_objects.svg?branch=master)](https://travis-ci.org/nebulab/solidus_page_objects)
+
 SolidusPageObjects
 ==================
 
