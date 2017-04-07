@@ -1,0 +1,5 @@
+require 'solidus/page_objects/sections/product_list'
+require 'solidus/page_objects/pages/products'
+require 'solidus/page_objects/sections/search'
+require 'solidus/page_objects/sections/top_navigation'
+require 'solidus/page_objects/pages/home'
