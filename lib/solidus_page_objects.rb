@@ -11,3 +11,4 @@ require 'solidus_page_objects/sections/header'
 
 # require pages
 require 'solidus_page_objects/pages/home'
+require 'solidus_page_objects/pages/products'
