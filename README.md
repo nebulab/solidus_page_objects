@@ -47,7 +47,7 @@ SolidusPageObjects is copyright © 2016 [Nebulab](http://nebulab.it/). It is fre
 
 ## About
 
-![Nebulab](http://nebulab.it/assets/logo.png)
+![Nebulab](http://nebulab.it/assets/images/public/logo.svg)
 
 SolidusPageObjects is funded and maintained by the [Nebulab](http://nebulab.it/) team.
 
