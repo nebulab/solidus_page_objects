@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 RSpec.describe SolidusPageObjects::Pages::Home do
+  before { create_list(:product, 5) }
+
   subject { described_class.new.tap(&:load) }
 
   it { is_expected.to be_displayed }
