@@ -3,7 +3,7 @@ module SolidusPageObjects
     class Home < SitePrism::Page
       set_url '/'
 
-      element :cart_link, 'ul#main-nav-bar li#link-to-cart a:first'
+      section :header, Sections::Header, '#header'
     end
   end
 end
