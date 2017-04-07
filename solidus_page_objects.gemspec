@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.license     = 'MIT'
 
   s.author    = 'Nebulab'
-  s.email     = 'info@nebulab.it'
+  s.email     = 'opensource@nebulab.it'
   # s.homepage  = 'http://www.example.com'
 
   s.files         = `git ls-files`.split("\n")
