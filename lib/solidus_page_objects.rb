@@ -9,6 +9,7 @@ require 'solidus_page_objects/sections/main_navigation'
 require 'solidus_page_objects/sections/search'
 require 'solidus_page_objects/sections/header'
 require 'solidus_page_objects/sections/product_list'
+require 'solidus_page_objects/sections/sidebar'
 
 # require pages
 require 'solidus_page_objects/pages/home'
