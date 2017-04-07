@@ -3,7 +3,7 @@ module SitePrism
     alias_method :original_all_there?, :all_there?
 
     def all_there?(options = {})
-      return if self.class.mapped_items.blank?
+      return true if self.class.mapped_items.blank?
       options[:recursive] ||= false
       original_all_there? && (!options[:recursive] || sections.all?(&:recursive_all_there?))
     end
