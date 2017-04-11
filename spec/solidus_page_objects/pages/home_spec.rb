@@ -1,7 +1,12 @@
 require 'spec_helper'
 
 RSpec.describe SolidusPageObjects::Pages::Home do
-  before { create_list(:product, 5) }
+  let(:taxonomy) { create(:taxonomy) }
+
+  before do
+    create_list(:product, 5)
+    create_list(:taxon, 3, taxonomy: taxonomy, parent: taxonomy.root)
+  end
 
   subject { described_class.new.tap(&:load) }
 
