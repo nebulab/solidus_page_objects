@@ -13,6 +13,12 @@ module SolidusPageObjects
         base.element :update_button, "#update-button"
         base.element :checkout_link, "#checkout-link"
       end
+
+      def apply_coupon_code(code)
+        coupon_code_input.set(code)
+        update_button.click
+        Pages::Cart.new
+      end
     end
   end
 end
