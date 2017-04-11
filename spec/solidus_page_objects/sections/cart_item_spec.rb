@@ -9,7 +9,7 @@ RSpec.describe SolidusPageObjects::Sections::CartItem do
   end
 
   describe '#delete' do
-    subject { page.cart.cart_items.first.delete }
+    subject { page.cart.items.first.delete }
 
     it { is_expected.to be_a(SolidusPageObjects::Pages::Cart) }
   end

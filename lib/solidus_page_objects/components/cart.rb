@@ -2,7 +2,7 @@ module SolidusPageObjects
   module Components
     module Cart
       def self.included(base)
-        base.sections :cart_items, Sections::CartItem, '.line-item'
+        base.sections :items, Sections::CartItem, '.line-item'
 
         base.element :cart_total, ".cart-total"
 
@@ -21,13 +21,13 @@ module SolidusPageObjects
       end
 
       def update_quantity_for_item(index, quantity:)
-        cart_items[index].quantity_input.set(quantity)
+        items[index].quantity_input.set(quantity)
         update_button.click
         Pages::Cart.new
       end
 
       def delete_item(index)
-        cart_items[index].delete
+        items[index].delete
       end
     end
   end
