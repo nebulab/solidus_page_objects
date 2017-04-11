@@ -27,3 +27,4 @@ require 'solidus_page_objects/sections/sidebar'
 # require pages
 require 'solidus_page_objects/pages/home'
 require 'solidus_page_objects/pages/products'
+require 'solidus_page_objects/pages/cart'
