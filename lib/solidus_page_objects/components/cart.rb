@@ -25,6 +25,10 @@ module SolidusPageObjects
         update_button.click
         Pages::Cart.new
       end
+
+      def delete_item(index)
+        cart_items[index].delete
+      end
     end
   end
 end

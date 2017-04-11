@@ -19,4 +19,10 @@ RSpec.describe SolidusPageObjects::Sections::Cart do
 
     it { is_expected.to be_a(SolidusPageObjects::Pages::Cart) }
   end
+
+  describe '#delete_item' do
+    subject { page.cart.delete_item(0) }
+
+    it { is_expected.to be_a(SolidusPageObjects::Pages::Cart) }
+  end
 end
