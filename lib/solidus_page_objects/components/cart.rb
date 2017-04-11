@@ -19,6 +19,12 @@ module SolidusPageObjects
         update_button.click
         Pages::Cart.new
       end
+
+      def update_quantity_for_item(index, quantity:)
+        cart_items[index].quantity_input.set(quantity)
+        update_button.click
+        Pages::Cart.new
+      end
     end
   end
 end

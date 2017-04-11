@@ -13,4 +13,10 @@ RSpec.describe SolidusPageObjects::Sections::Cart do
 
     it { is_expected.to be_a(SolidusPageObjects::Pages::Cart) }
   end
+
+  describe '#update_quantity_for_item' do
+    subject { page.cart.update_quantity_for_item(0, quantity: 3) }
+
+    it { is_expected.to be_a(SolidusPageObjects::Pages::Cart) }
+  end
 end
