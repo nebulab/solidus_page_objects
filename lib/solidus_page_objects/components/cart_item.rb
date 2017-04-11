@@ -10,6 +10,11 @@ module SolidusPageObjects
         base.element :total, ".cart-item-total"
         base.element :delete_link, ".cart-item-delete > a"
       end
+
+      def delete
+        delete_link.click
+        Pages::Cart.new
+      end
     end
   end
 end
