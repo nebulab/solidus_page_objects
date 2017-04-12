@@ -5,6 +5,8 @@ module SolidusPageObjects
         base.element :title, "#product-description .product-title"
         base.element :description, "#product-description > div:first"
         base.element :price, "#product-description #product-price"
+
+        base.section :images, Sections::ProductImages, "#product-images"
       end
     end
   end
