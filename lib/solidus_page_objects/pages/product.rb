@@ -4,7 +4,10 @@ module SolidusPageObjects
       set_url "/products{/slug}"
 
       section :header, Sections::Header, '#header'
-      section :product, Sections::Product, '#content'
+      section :info, Sections::Product::Info, '#product-description'
+      section :images, Sections::Product::Images, "#product-images"
+
+      sections :properties, Sections::Product::Property, "table#product-properties tr"
     end
   end
 end

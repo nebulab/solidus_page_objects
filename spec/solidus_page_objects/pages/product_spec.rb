@@ -1,7 +1,8 @@
 require 'spec_helper'
 
 RSpec.describe SolidusPageObjects::Pages::Product do
-  let(:product) { create(:product) }
+  let(:property) { create(:property) }
+  let(:product) { create(:product, properties: [property]) }
 
   subject { described_class.new.tap { |page| page.load(slug: product.slug) } }
 
