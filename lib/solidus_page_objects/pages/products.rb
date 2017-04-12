@@ -5,7 +5,7 @@ module SolidusPageObjects
 
       section :header, Sections::Header, '#header'
       section :sidebar, Sections::Sidebar, '#sidebar'
-      section :product_list, Sections::ProductList, '#products'
+      section :product_list, Sections::Product::List, '#products'
     end
   end
 end
