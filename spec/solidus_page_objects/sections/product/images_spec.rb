@@ -1,12 +1,7 @@
 require 'spec_helper'
 
 RSpec.describe SolidusPageObjects::Sections::Product::Images do
-  let(:product) do
-    create(:product).tap do |product|
-      product.images << create(:image)
-      product.images << create(:image)
-    end
-  end
+  let(:product) { create(:product, :with_images) }
 
   let!(:page) { SolidusPageObjects::Pages::Product.new.tap { |page| page.load(slug: product.slug) } }
 
