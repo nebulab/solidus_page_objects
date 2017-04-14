@@ -1,15 +1,12 @@
 require 'spec_helper'
 
 RSpec.describe SolidusPageObjects::Pages::Product do
-  let(:taxon) { create(:taxon) }
-  let(:property) { create(:property) }
-  let(:product) { create(:product, properties: [property], taxons: [taxon]) }
+  let(:product) { create(:product, :with_images, :with_properties, :with_taxons) }
 
-  before { create_list(:product, 3, taxons: [taxon]) }
+  before { create_list(:product, 3) }
 
-  subject { described_class.new.tap { |page| page.load(slug: product.slug) } }
-
-  it { is_expected.to be_displayed }
-  it { is_expected.to have_current_path(spree.product_path(product.slug)) }
-  it { is_expected.to be_all_there }
+  it_behaves_like 'a page' do
+    let(:page_path) { spree.product_path(product.slug) }
+    let(:params) { { slug: product.slug } }
+  end
 end

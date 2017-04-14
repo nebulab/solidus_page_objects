@@ -1,16 +1,9 @@
 require 'spec_helper'
 
 RSpec.describe SolidusPageObjects::Pages::Home do
-  let(:taxonomy) { create(:taxonomy) }
+  before { create_list(:product, 5, :with_taxons) }
 
-  before do
-    create_list(:product, 5)
-    create_list(:taxon, 3, taxonomy: taxonomy, parent: taxonomy.root)
+  it_behaves_like 'a page' do
+    let(:page_path) { spree.root_path }
   end
-
-  subject { described_class.new.tap(&:load) }
-
-  it { is_expected.to be_displayed }
-  it { is_expected.to have_current_path(spree.root_path) }
-  it { is_expected.to be_all_there(recursive: true) }
 end

@@ -7,9 +7,7 @@ RSpec.describe SolidusPageObjects::Pages::Cart do
     allow_any_instance_of(Spree::StoreController).to receive_messages(spree_current_user: order.user)
   end
 
-  subject { described_class.new.tap(&:load) }
-
-  it { is_expected.to be_displayed }
-  it { is_expected.to have_current_path(spree.cart_path) }
-  it { is_expected.to be_all_there(recursive: true) }
+  it_behaves_like 'a page' do
+    let(:page_path) { spree.cart_path }
+  end
 end
