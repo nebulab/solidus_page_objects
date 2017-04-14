@@ -5,6 +5,7 @@ require 'site_prism'
 require 'solidus_page_objects/site_prism/element_checker'
 
 # require components
+require 'solidus_page_objects/components/checkout'
 require 'solidus_page_objects/components/main_navigation'
 require 'solidus_page_objects/components/search'
 require 'solidus_page_objects/components/header'
@@ -39,6 +40,7 @@ require 'solidus_page_objects/sections/cart_item'
 require 'solidus_page_objects/sections/cart'
 
 # require pages
+require 'solidus_page_objects/pages/checkout/address'
 require 'solidus_page_objects/pages/home'
 require 'solidus_page_objects/pages/products'
 require 'solidus_page_objects/pages/cart'
