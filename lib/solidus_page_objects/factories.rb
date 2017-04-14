@@ -1,4 +1,11 @@
 FactoryGirl.modify do
+  factory :taxon do
+    after(:create) do |taxon|
+      taxon.parent = taxon.taxonomy.root
+      taxon.save!
+    end
+  end
+
   factory :product do
     trait :with_images do
       transient { images_count 3 }
@@ -26,13 +33,6 @@ FactoryGirl.modify do
         product.properties = create_list(:property, evaluator.properties_count)
         product.save!
       end
-    end
-  end
-
-  factory :taxon do
-    after(:create) do |taxon|
-      taxon.parent = taxon.taxonomy.root
-      taxon.save!
     end
   end
 end
