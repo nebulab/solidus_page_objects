@@ -7,6 +7,10 @@ module SolidusPageObjects
           base.element :name, '.rate-name'
           base.element :price, '.rate-cost'
         end
+
+        def select
+          input_radio.click
+        end
       end
     end
   end
