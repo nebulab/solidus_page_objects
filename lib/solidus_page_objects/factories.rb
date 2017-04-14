@@ -1,9 +1,6 @@
 FactoryGirl.modify do
   factory :taxon do
-    after(:create) do |taxon|
-      taxon.parent = taxon.taxonomy.root
-      taxon.save!
-    end
+    parent { taxonomy.root }
   end
 
   factory :product do
