@@ -11,6 +11,7 @@ else
   gem "rails_test_params_backport", group: :test
 end
 
+gem 'listen'
 gem 'mysql2'
 gem 'pg'
 
