@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-RSpec.describe SolidusPageObjects::Pages::Checkout::Address do
-  let(:order) { OrderWalkthrough.up_to(:address) }
+RSpec.describe SolidusPageObjects::Pages::Checkout::Address, type: :feature, js: true do
+  let(:order) { create(:order_with_line_items) }
   let(:user) { create(:user) }
 
   before do
