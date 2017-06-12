@@ -2,7 +2,7 @@ sudo: false
 cache: bundler
 language: ruby
 rvm:
-  - 2.3.1
+  - 2.4.1
 env:
   matrix:
     - SOLIDUS_BRANCH=v1.1 DB=postgres
