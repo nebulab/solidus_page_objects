@@ -21,6 +21,7 @@ require 'solidus_page_objects/components/taxonomies'
 require 'solidus_page_objects/components/sidebar'
 require 'solidus_page_objects/components/cart_item'
 require 'solidus_page_objects/components/cart'
+require 'solidus_page_objects/components/checkout/address'
 
 # require sections
 require 'solidus_page_objects/sections/main_navigation'
@@ -38,6 +39,8 @@ require 'solidus_page_objects/sections/taxonomies'
 require 'solidus_page_objects/sections/sidebar'
 require 'solidus_page_objects/sections/cart_item'
 require 'solidus_page_objects/sections/cart'
+require 'solidus_page_objects/sections/checkout/address'
+require 'solidus_page_objects/sections/checkout/customer_information'
 
 # require pages
 require 'solidus_page_objects/pages/checkout/address'
