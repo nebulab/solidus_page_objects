@@ -1,8 +1,14 @@
-sudo: false
+dist: trusty
+sudo: required
 cache: bundler
 language: ruby
+services:
+  - postgresql
+  - mysql
 rvm:
   - 2.4.1
+before_script:
+  - mysql -e 'GRANT ALL ON *.* TO travis@localhost;'
 env:
   matrix:
     - SOLIDUS_BRANCH=v1.1 DB=postgres
