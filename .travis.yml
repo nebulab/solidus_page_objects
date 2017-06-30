@@ -4,7 +4,7 @@ cache: bundler
 language: ruby
 services:
   - postgresql
-  - mysqld
+  - mysql
 rvm:
   - 2.4.1
 env:
