@@ -5,6 +5,7 @@ require 'site_prism'
 require 'solidus_page_objects/site_prism/element_checker'
 
 # require components
+require 'solidus_page_objects/components/coupon_code'
 require 'solidus_page_objects/components/checkout'
 require 'solidus_page_objects/components/main_navigation'
 require 'solidus_page_objects/components/search'
@@ -31,6 +32,7 @@ require 'solidus_page_objects/components/checkout/shipping_method'
 require 'solidus_page_objects/components/checkout/delivery'
 
 # require sections
+require 'solidus_page_objects/sections/coupon_code'
 require 'solidus_page_objects/sections/main_navigation'
 require 'solidus_page_objects/sections/search'
 require 'solidus_page_objects/sections/header'
