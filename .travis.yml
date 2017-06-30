@@ -1,6 +1,10 @@
-sudo: false
+dist: trusty
+sudo: required
 cache: bundler
 language: ruby
+services:
+  - postgresql
+  - mysqld
 rvm:
   - 2.4.1
 env:
