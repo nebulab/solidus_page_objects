@@ -13,7 +13,9 @@ RSpec.describe SolidusPageObjects::Components::CouponCode do
   describe '#apply' do
     before do
       allow(subject).to receive(:input).and_return(subject.input)
-      allow(subject).to receive(:apply_button).and_return(subject.apply_button)
+      if Gem::Version.new(Spree.try(:solidus_version) || '1.1') >= Gem::Version.new('1.4')
+        allow(subject).to receive(:apply_button).and_return(subject.apply_button)
+      end
     end
 
     after do
@@ -24,8 +26,10 @@ RSpec.describe SolidusPageObjects::Components::CouponCode do
       expect(subject.input).to receive(:set).with('123')
     end
 
-    it 'click to apply coupon button' do
-      expect(subject.apply_button).to receive(:click)
+    if Gem::Version.new(Spree.try(:solidus_version) || '1.1') >= Gem::Version.new('1.4')
+      it 'click to apply coupon button' do
+        expect(subject.apply_button).to receive(:click)
+      end
     end
   end
 end
