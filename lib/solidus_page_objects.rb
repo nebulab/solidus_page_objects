@@ -2,6 +2,9 @@ require 'capybara'
 require 'capybara/rspec'
 require 'site_prism'
 
+# Solidus version
+require 'spree/core/version'
+
 require 'solidus_page_objects/site_prism/element_checker'
 
 # require components
