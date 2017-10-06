@@ -1,9 +1,8 @@
 module SolidusPageObjects
   module Pages
-    class Product < SitePrism::Page
+    class Product < Layout
       set_url "/products{/slug}"
 
-      section :header, Sections::Header, '#header'
       section :info, Sections::Product::Info, '#product-description'
       section :images, Sections::Product::Images, '#product-images'
       section :cart, Sections::Product::Cart, '#cart-form'
