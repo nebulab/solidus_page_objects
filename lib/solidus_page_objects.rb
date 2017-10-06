@@ -8,6 +8,7 @@ require 'spree/core/version'
 require 'solidus_page_objects/site_prism/element_checker'
 
 # require components
+require 'solidus_page_objects/components/sign_in'
 require 'solidus_page_objects/components/coupon_code'
 require 'solidus_page_objects/components/checkout'
 require 'solidus_page_objects/components/main_navigation'
@@ -62,6 +63,7 @@ require 'solidus_page_objects/sections/checkout/shipping_method'
 require 'solidus_page_objects/sections/checkout/delivery'
 
 # require pages
+require 'solidus_page_objects/pages/sign_in'
 require 'solidus_page_objects/pages/checkout/address'
 require 'solidus_page_objects/pages/checkout/payment'
 require 'solidus_page_objects/pages/home'
