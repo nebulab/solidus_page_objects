@@ -1,4 +1,4 @@
-FactoryGirl.modify do
+FactoryBot.modify do
   factory :taxon do
     parent { taxonomy.root }
   end
